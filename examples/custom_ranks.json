@@ -1,0 +1,18 @@
+{
+  "description": "Example custom rank configuration for theming",
+  "ranks": [
+    {"name": "Noob", "xp": 0, "title": "Fresh Spawn"},
+    {"name": "Apprentice", "xp": 500, "title": "Learning"},
+    {"name": "Developer", "xp": 1500, "title": "Getting There"},
+    {"name": "Engineer", "xp": 3500, "title": "Competent"},
+    {"name": "Senior Dev", "xp": 7000, "title": "Experienced"},
+    {"name": "Staff Eng", "xp": 12000, "title": "Reliable"},
+    {"name": "Principal", "xp": 20000, "title": "Seasoned"},
+    {"name": "Architect", "xp": 32000, "title": "Visionary"},
+    {"name": "Fellow", "xp": 50000, "title": "Distinguished"},
+    {"name": "VP Eng", "xp": 75000, "title": "Leader"},
+    {"name": "CTO", "xp": 110000, "title": "Executive"},
+    {"name": "Legend", "xp": 160000, "title": "Mythical"}
+  ],
+  "note": "This is an example of how ranks could be customized. Not yet implemented - contributions welcome!"
+}

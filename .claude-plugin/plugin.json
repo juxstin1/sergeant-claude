@@ -1,0 +1,12 @@
+{
+  "name": "sergeant-claude",
+  "description": "Military-style coding commander with XP progression, achievements, and code analysis tools. Sergeant Claude treats your codebase like an active warzone with tactical operations, rank progression from Recruit to Supreme Commander, and gamified development.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Justin",
+    "email": ""
+  },
+  "homepage": "https://github.com/juxstin1/sergeant-claude",
+  "repository": "https://github.com/juxstin1/sergeant-claude",
+  "keywords": ["gamification", "productivity", "code-review", "military", "xp", "achievements"]
+}

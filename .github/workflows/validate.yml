@@ -1,0 +1,65 @@
+name: Validate Plugin
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Validate plugin.json
+      run: |
+        echo "Validating plugin manifest..."
+        python -c "import json; json.load(open('.claude-plugin/plugin.json'))"
+        echo "✓ plugin.json is valid JSON"
+
+    - name: Check required files
+      run: |
+        echo "Checking required files..."
+        test -f ".claude-plugin/plugin.json" && echo "✓ plugin.json exists"
+        test -f "skills/sergeant-claude/SKILL.md" && echo "✓ SKILL.md exists"
+        test -d "commands" && echo "✓ commands directory exists"
+        test -d "scripts" && echo "✓ scripts directory exists"
+
+    - name: Validate Python scripts
+      run: |
+        echo "Checking Python syntax..."
+        python -m py_compile scripts/recon.py
+        python -m py_compile scripts/court_martial.py
+        python -m py_compile scripts/xp_tracker.py
+        python -m py_compile scripts/init_operation.py
+        python -m py_compile scripts/achievements.py
+        python -m py_compile scripts/daily_challenges.py
+        python -m py_compile scripts/leaderboard.py
+        echo "✓ All Python scripts have valid syntax"
+
+    - name: Check command frontmatter
+      run: |
+        echo "Checking command files..."
+        for f in commands/*.md; do
+          if head -1 "$f" | grep -q "^---"; then
+            echo "✓ $f has frontmatter"
+          else
+            echo "✗ $f missing frontmatter"
+            exit 1
+          fi
+        done
+
+    - name: Validation complete
+      run: |
+        echo ""
+        echo "╔═══════════════════════════════════════╗"
+        echo "║     ✓ ALL VALIDATIONS PASSED ✓        ║"
+        echo "║     Plugin is combat-ready!           ║"
+        echo "╚═══════════════════════════════════════╝"

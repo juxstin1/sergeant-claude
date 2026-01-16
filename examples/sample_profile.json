@@ -1,0 +1,29 @@
+{
+  "xp": 7500,
+  "rank": "Sergeant",
+  "bugs_fixed": 45,
+  "features_complete": 12,
+  "tests_written": 28,
+  "refactors_clean": 8,
+  "operations_complete": 3,
+  "ambushes": 15,
+  "fortifications": 7,
+  "court_martials": 22,
+  "recons": 18,
+  "current_streak": 5,
+  "max_streak": 14,
+  "combo": 3,
+  "last_active": "2025-01-15",
+  "unlocked_achievements": [
+    "purple_heart",
+    "bronze_star",
+    "good_conduct",
+    "first_campaign",
+    "code_ninja"
+  ],
+  "titles": [
+    "Bug Hunter",
+    "Test Warrior"
+  ],
+  "notes": "This is an example profile showing what a Sergeant-rank soldier's stats might look like."
+}

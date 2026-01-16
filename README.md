@@ -1,5 +1,10 @@
 # Sergeant Claude
 
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/juxstin1/sergeant-claude/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-purple.svg)](https://claude.ai/code)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 ```
 ███████╗███████╗██████╗  ██████╗ ███████╗ █████╗ ███╗   ██╗████████╗
 ██╔════╝██╔════╝██╔══██╗██╔════╝ ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝
